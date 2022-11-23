@@ -20,7 +20,7 @@ void (*get_opcode(char *str))(stack_t **stack, unsigned int line_number);
 
 	while (opcode_func[i].opcode && strcmp(str, opcode_func[i].opcode) != 0)
 		i++;
-	if (opcode_fun[i].opcode == NULL)
+	if (opcode_func[i].opcode == NULL)
 		return (NULL);
-	return (opcode_fun[i].f);
+	return (opcode_func[i].f);
 }
